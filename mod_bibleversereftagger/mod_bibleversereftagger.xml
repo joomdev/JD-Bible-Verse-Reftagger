@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+	<name>JD Bible Verse Reftagger</name>
+	<creationDate>July 2018</creationDate>
+	<version>3.0.0</version>
+	<author>JoomDev (Formerly GraphicAholic)</author>
+	<copyright>Copyright (C) 2020 Joomdev, Inc. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>info@joomdev.com</authorEmail>
+	<authorUrl>https://www.joomdev.com</authorUrl>
+
+	<description>
+	<![CDATA[
+		<div class="alert alert-info" style="font-weight: normal;">
+			<h3>JD Bible Verse Reftagger - Module</h3>
+			<p>JD Bible Verse Reftagger helps you to add Bible Verse Reftagger to your Joomla! the website easily. Just include references and JD Bible Verse Reftagger automatically tags them, creating tooltips that appear when a reader hovers over them.</p>
+			<p>JD Bible Verse Reftagger formerly known as Bible Verse Reftagger from Graphicaholic is now moved to JoomDev along with other Extensions. <strong>Check out the <a href="https://www.joomdev.com/graphicaholic" target="_blank">Announcement here.</a></strong></p>
+			<a href="https://www.joomdev.com/forum/jd-bible-verse-reftagger" target="_blank">Support</a> | <span>Demo</span> | <a href="https://www.joomdev.com/products/extensions/jd-bible-verse-reftagger" target="_blank">More Details</a>
+		</div>
+	]]>
+	</description>
+
+	<files>
+		<filename module="mod_bibleversereftagger">mod_bibleversereftagger.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_bibleversereftagger.xml</filename>
+	</files>
+
+	<updateservers>
+		<server type="extension" priority="1" name="JD Bible Verse Reftagger">https://joomdev.com/updates/bibleversereftaggermodule.xml</server>
+	</updateservers>
+
+	<config>
+		<fields name="params">
+			<!-- General Settings -->
+			<fieldset name="basic" group="basic">
+				<field name="note03" type="note" label="BIBLE TRANSLATION" />
+				<field name="bibleTranslation" type="list" default="NLT" label="Bible Translation" description="Select a specific Bible to pull your passages from.">
+					<option value="AB">Amplified Bible (AMP)</option>
+					<option value="ASV">American Standard Version (ASV)</option>
+					<option value="DAR">Darby</option>
+					<option value="ESV" selected="selected">English Standard Version (ESV)</option>
+					<option value="GW">God’s Word (GW)</option>
+					<option value="HCSB">Holman Christian Standard Bible (HCSB)</option>
+					<option value="KJV">King James Version (KJV)</option>
+					<option value="LEB">Lexham English Bible (LEB)</option>
+					<option value="MESSAGE">Message Bible</option>
+					<option value="NASB">New American Standard Bible (NASB)</option>
+					<option value="NCV">New Century Version (NCV)</option>
+					<option value="NIV">New International Version (NIV)</option>
+					<option value="NIRV">New International Reader's Version (NIRV)</option>
+					<option value="NKJV">New King James Version (NKJV)</option>
+					<option value="NLT">New Living Translation (NLT)</option>
+					<option value="DOUAYRHEIMS">Douay-Rheims</option>
+					<option value="YLT">Young's Literal Translation (YLT)</option>
+				</field>
+				<field name="openWindow" type="list" default="true" label="Open Bible in new window" description="Open Bible passage links in a new browser window = Yes or the same browser window = No.">
+					<option value="true">JYES</option>
+					<option value="false">JNO</option>
+				</field>
+			</fieldset>
+			<fieldset name="styling" group="styling" label="Styling">
+				<field name="note01" type="note" label="HEADING STYLE" />
+				<field name="headerFont" type="list" default="inherit" label="Header font style" description="Choose font style for the header text. If default, it will use your template's default font style.">
+					<option value="inherit">Default</option>
+					<option value="Arial, 'Helvetica Neue', Helvetica, sans-serif">Arial</option>
+					<option value="'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace">Courier New</option>
+					<option value="Georgia, Times, 'Times New Roman', serif">Georgia</option>
+					<option value="Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif">Palatino</option>
+					<option value="Tahoma, Verdana, Segoe, sans-serif">Tahoma</option>
+					<option value="TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif">Times New Roman</option>
+					<option value="Verdana, Geneva, sans-serif">Verdana</option>
+				</field>
+				<field name="headerFontSize" type="text" default="18px" label="Header font size" description="Adjust to your specific needs." />
+				<field name="headerFontColor" type="color" default="" label="Header font color" description="Adjust to your specific needs." />
+				<field name="headerBackgroundColor" type="color" default="" label="Header background color" description="Adjust to your specific needs." />
+				<field name="note02" type="note" label="BODY STYLE" />
+				<field name="bodyFont" type="list" default="inherit" label="Body font style" description="Choose font style for the body text. If default, it will use your template's default font style.">
+					<option value="inherit">Default</option>
+					<option value="Arial, 'Helvetica Neue', Helvetica, sans-serif">Arial</option>
+					<option value="'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace">Courier New</option>
+					<option value="Georgia, Times, 'Times New Roman', serif">Georgia</option>
+					<option value="Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif">Palatino</option>
+					<option value="Tahoma, Verdana, Segoe, sans-serif">Tahoma</option>
+					<option value="TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif">Times New Roman</option>
+					<option value="Verdana, Geneva, sans-serif">Verdana</option>
+				</field>
+				<field name="bodyFontSize" type="text" default="14px" label="Body font size" description="Adjust to your specific needs." />
+				<field name="bodyFontColor" type="color" default="" label="Body font color" description="Adjust to your specific needs." />
+				<field name="note04" type="note" label="ADDITIONAL STYLING" />
+				<field name="backgroundStyle" type="list" default="light" label="Background style" description="Choose between Light or Dark.">
+					<option value="light">Light</option>
+					<option value="dark">Dark</option>
+				</field>
+				<field name="dropShadow" type="list" default="true" label="Drop shadow" description="Yes=display dropshadow effect around tooltip popup box. No=don't display dropshadow effect.">
+					<option value="true">JYES</option>
+					<option value="false">JNO</option>
+				</field>
+				<field name="roundedCorners" type="list" default="false" label="Rounded corners" description="Yes=use rounded corners for your tooltip popup box. No=use square corners around your tooltip popup box.">
+					<option value="true">JYES</option>
+					<option value="false">JNO</option>
+				</field>
+			</fieldset>
+			<fieldset name="social" group="social" label="Social">
+				<field name="note05" type="note" label="SOCIAL SHARE" />
+				<field name="showTwitter" type="list" default="twitter" label="Show Twitter icon" description="Yes=show Twitter share icon link in header. No=don't display the Twitter share icon link in header.">
+					<option value="twitter">JYES</option>
+					<option value=" ">JNO</option>
+				</field>
+				<field name="showFacebook" type="list" default="facebook" label="Show Facebook icon" description="Yes=show Facebook share icon link in header. No=don't display the Facebook share icon link in header.">
+					<option value="facebook">JYES</option>
+					<option value=" ">JNO</option>
+				</field>
+				<field name="showGoogle" type="list" default="google" label="Show Google+ icon" description="Yes=show Google+ share icon link in header. No=don't display the Google+ share icon link in header.">
+					<option value="google">JYES</option>
+					<option value=" ">JNO</option>
+				</field>
+				<field name="showFaithlife" type="list" default="faithlife" label="Show Faithlife icon" description="Yes=show Faithlife share icon link in header. No=don't display the Faithlife share icon link in header.">
+					<option value="faithlife">JYES</option>
+					<option value=" ">JNO</option>
+				</field>
+			</fieldset>
+			<fieldset name="optional" group="optional" label="Optional">
+				<field name="note06" type="note" label="EXCLUDE CONTENT" />
+				<field name="noSearchTagNames" type="textarea" default="" label="HTML tags to exclude" description="Format example: &#34;h1&#34;, &#34;h2&#34;, &#34;h3&#34; Please note: Do not add a comma after last tag." />
+        Classes to exclude:
+				<field name="noSearchClassNames" type="textarea" default="" label="HTML classes to exclude" description="Format example: &#34;img&#34;, &#34;body&#34;, &#34;navigation&#34; Please note: Do not add a comma after last class." />
+				<field name="note07" type="note" label="LOGOS INTEGRATION" />
+				<field name="logosLinkIcon" type="list" default="light" label="Logo Integration" description="Select to display Logos as Dark or Light.">
+					<option value="light">Light</option>
+					<option value="dark">Dark</option>
+				</field>
+				<field name="addLogosLink" type="list" default="true" label="Add Logos buttons/links to tooltip" description="Select to display Logo buttons and links.">
+					<option value="true">JYES</option>
+					<option value="false">JNO</option>
+				</field>
+				<field name="useLogosLink" type="list" default="initial" label="Display Logos buttons/links in tooltip" description="Select to display Logo buttons and links.">
+					<option value="initial">JYES</option>
+					<option value="none">JNO</option>
+				</field>
+				<field name="note08" type="note" label="ADVANCED OPTIONS" />
+				<field name="useTooltip" type="list" default="true" label="Show tooltip on hover" description="If set to Yes the tooltip popup box will be active. If No the tooltip popup box is deactivated and your passage text will be a link to biblia.com that will display the passage.">
+					<option value="true">JYES</option>
+					<option value="false">JNO</option>
+				</field>
+				<field name="caseInsensitive" type="list" default="!true" label="Case sensitivity" description="Select Yes to force text case sensitivity.">
+					<option value="!true">JYES</option>
+					<option value="!false">JNO</option>
+				</field>
+				<field name="convertHyperlinks" type="list" default="false" label="Enable Reftagger on existing Biblia links" description="Consider this option as somewhat of a commercial for Faithlife Reftagger. Selecting Yes will add a link to Faithlife Reftagger when you click onto a passage. Faithlife provided this script so it's the lease I could do to promote their service!">
+					<option value="true">JYES</option>
+					<option value="false">JNO</option>
+				</field>
+				<field name="tagChapters" type="list" default="false" label="Chapter-level tagging" description="Much like the above option, this is somewhat of a commercial for Faithlife Reftagger's services when Yes is selected. ">
+					<option value="true">JYES</option>
+					<option value="false">JNO</option>
+				</field>
+			</fieldset>
+			<!-- Advanced Settings -->
+			<fieldset name="advanced" group="advanced">
+				<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="fieldMODULECLASSSUFFIX" />
+				<field name="cache" type="radio" class="btn-group" default="1" label="Caching" description="Select whether to cache the content of this module">
+					<option value="1">Use global</option>
+					<option value="0">No caching</option>
+				</field>
+				<field name="cache_time" type="text" default="900" label="Cache Time" description="The time before the module is recached" />
+				<field name="documentation" type="docs" default="900" label="" description="" />
+			</fieldset>
+		</fields>
+	</config>
+
+</extension>
